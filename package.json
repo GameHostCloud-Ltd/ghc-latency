@@ -13,7 +13,7 @@
   },
   "files": ["index.js", "index.d.ts"],
   "scripts": {
-    "test": "node --test test/"
+    "test": "node --test test/index.test.mjs"
   },
   "license": "MIT",
   "author": "HHI Solutions Oy <support@gamehostcloud.com>",
