@@ -56,7 +56,7 @@ Options: `samples` (4), `warmup` (1), `timeout` (8000ms), `signal` (AbortSignal)
 
 ## Demo
 
-Open `demo/index.html` in a browser (or serve the folder statically) and hit
+Open `docs/index.html` in a browser (or serve the folder statically) and hit
 **Measure now** — it measures three public anchors live from your machine.
 
 ## License
