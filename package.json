@@ -1,0 +1,13 @@
+{
+  "name": "ghc-latency",
+  "version": "1.0.0",
+  "description": "Honest browser-side latency measurement — real RTT, no estimates. By GameHostCloud.",
+  "type": "module",
+  "main": "index.js",
+  "exports": { ".": "./index.js" },
+  "license": "MIT",
+  "author": "HHI Solutions Oy <support@gamehostcloud.com>",
+  "homepage": "https://gamehostcloud.com",
+  "repository": { "type": "git", "url": "https://github.com/GameHostCloud-Ltd/ghc-latency" },
+  "keywords": ["latency", "ping", "rtt", "browser", "measurement", "game-servers"]
+}
