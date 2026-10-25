@@ -33,13 +33,18 @@
     and are only examples — swap in your own with <code>measureRegions({...})</code>.</p>
 </div>
 <script type="module">
-import { measureRegions } from '../index.js';
+import { measureRegions } from './index.js';
 
-// Example anchors — public mirror endpoints (HTTP/200 or 404, doesn't matter).
+// Demo anchors — the same public latency anchors GameHostCloud's own site
+// probes (Vultr regional ping hosts + object storage). Any endpoint works:
+// responses are opaque (`no-cors`) — only the round-trip time is used.
 const ENDPOINTS = {
-  'Hetzner (Nuremberg)': 'https://speed.hetzner.de/100KB.bin',
-  'OVH (Roubaix)': 'https://rbx.proof.ovh.net/files/1Mb.dat',
-  'Cloudflare': 'https://speed.cloudflare.com/__down?bytes=1000',
+  'Helsinki': 'https://hel1.your-objectstorage.com/',
+  'Frankfurt': 'https://fra-de-ping.vultr.com/favicon.ico',
+  'New York': 'https://nj-us-ping.vultr.com/favicon.ico',
+  'Singapore': 'https://sgp-ping.vultr.com/favicon.ico',
+  'Tokyo': 'https://hnd-jp-ping.vultr.com/favicon.ico',
+  'Sydney': 'https://syd-au-ping.vultr.com/favicon.ico',
 };
 
 const rows = document.getElementById('rows');

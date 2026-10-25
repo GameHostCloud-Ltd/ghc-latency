@@ -54,7 +54,11 @@ export async function measureLatency(url, options = {}) {
       await fetch(cacheBusted(), {
         method: 'GET',
         cache: 'no-store',
-        mode: 'cors',
+        // `no-cors` is required: `cors` rejects responses from endpoints
+        // without Access-Control-Allow-Origin, and an opaque response still
+        // gives the real RTT (we never read the body). Same mode the
+        // GameHostCloud site itself uses for its probes.
+        mode: 'no-cors',
         credentials: 'omit',
         referrerPolicy: 'no-referrer',
         signal: controller.signal,
