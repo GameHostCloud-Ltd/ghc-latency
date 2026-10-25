@@ -15,3 +15,5 @@ jobs:
       - uses: actions/checkout@v4
       - run: node --check index.js
       - run: npm test
+      - name: Demo library copy must match index.js
+        run: diff -q index.js docs/index.js
